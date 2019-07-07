@@ -9,7 +9,8 @@ import tk.mybatis.spring.annotation.MapperScan;
 @SpringBootApplication
 @MapperScan(basePackages="com.skl.mapper")
 //定义扫描的路径从中找出标识了需要装配的类自动装配到spring的bean容器中
-@ComponentScan(basePackages= {"com.skl"})
+// org.n3r.idworker 生成独一无二的id
+@ComponentScan(basePackages= {"com.skl","org.n3r.idworker"})
 public class Application {
 
   public static void main(String[] args) {
