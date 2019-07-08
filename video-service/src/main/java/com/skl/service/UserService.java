@@ -20,4 +20,12 @@ public interface UserService {
    * @param user
    */
   void saveUser(Users user);
+
+  /**
+   *
+   * @param username
+   * @param md5Str
+   * @return
+   */
+  Users queryUserForLogin(String username, String md5Str);
 }
