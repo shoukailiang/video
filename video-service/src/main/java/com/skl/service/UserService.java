@@ -28,4 +28,17 @@ public interface UserService {
    * @return
    */
   Users queryUserForLogin(String username, String md5Str);
+
+  /**
+   * 用户修改信息
+   * @param user
+   */
+  void updateUserInfo(Users user);
+
+  /**
+   * 查询用户信息
+   * @param userId
+   * @return
+   */
+  Users queryUserInfo(String userId);
 }
