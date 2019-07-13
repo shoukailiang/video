@@ -12,4 +12,11 @@ public class BasicController {
   public RedisOperator redisOperator;
 
   public static final String USER_REDIS_SESSION = "USER-REDIS-SESSION";
+
+
+  // 文件保存的命名空间
+  public static final String FILE_SPACE = "C:/video";
+
+  // ffmpeg所在目录
+  public static final String FFMPEG_EXE = "C:\\ffmpeg\\bin\\ffmpeg.exe";
 }

@@ -19,4 +19,9 @@ public class BgmServiceImpl implements BgmService {
     List<Bgm> bgms = bgmMapper.selectAll();
     return bgms;
   }
+
+  @Override
+  public Bgm queryBgmById(String bgmId) {
+    return bgmMapper.selectByPrimaryKey(bgmId);
+  }
 }
