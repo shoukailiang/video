@@ -1,8 +1,11 @@
 package com.skl.controller;
 
 
+import com.skl.emums.VideoStatusEnum;
 import com.skl.pojo.Bgm;
+import com.skl.pojo.Videos;
 import com.skl.service.BgmService;
+import com.skl.service.VideoService;
 import com.skl.utils.MergeVideoMp3;
 import com.skl.utils.SklJSONResult;
 import io.swagger.annotations.*;
@@ -17,6 +20,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
+import java.util.Date;
 import java.util.UUID;
 
 
@@ -27,6 +31,9 @@ public class VideoController extends BasicController {
 
   @Autowired
   private BgmService bgmService;
+
+  @Autowired
+  private VideoService videoService;
 
 
   @ApiOperation(value = "上传视频", notes = "上传视频的接口")
@@ -63,6 +70,9 @@ public class VideoController extends BasicController {
 
     // 保存到数据库中的相对路径
     String uploadPathDB = "/" + userId + "/video";
+    String coverPathDB = "/" + userId + "/video";
+
+
     String finalVideoPath="";
 
     FileOutputStream fileOutputStream = null;
@@ -71,11 +81,20 @@ public class VideoController extends BasicController {
       if (file != null) {
 
         String fileName = file.getOriginalFilename();
+
+        // abc.mp4
+        String arrayFilenameItem[] =  fileName.split("\\.");
+        String fileNamePrefix = "";
+        for (int i = 0 ; i < arrayFilenameItem.length-1 ; i ++) {
+          fileNamePrefix += arrayFilenameItem[i];
+        }
+
         if (StringUtils.isNotBlank(fileName)) {
           // 文件上传的最终保存路径
           finalVideoPath = FILE_SPACE + uploadPathDB + "/" + fileName;
           // 设置数据库保存的路径
           uploadPathDB += ("/" + fileName);
+          coverPathDB = coverPathDB + "/" + fileNamePrefix + ".jpg";
 
           File outFile = new File(finalVideoPath);
           // path是目录返回true
@@ -122,6 +141,88 @@ public class VideoController extends BasicController {
     }
     System.out.println("uploadPathDB=" + uploadPathDB);
     System.out.println("finalVideoPath=" + finalVideoPath);
+
+    // 保存视频信息到数据库
+    Videos video = new Videos();
+    video.setAudioId(bgmId);
+    video.setUserId(userId);
+    video.setVideoSeconds((float)videoSeconds);
+    video.setVideoHeight(videoHeight);
+    video.setVideoWidth(videoWidth);
+    video.setVideoDesc(desc);
+    video.setVideoPath(uploadPathDB);
+    video.setCoverPath(coverPathDB);
+    video.setStatus(VideoStatusEnum.SUCCESS.value);
+    video.setCreateTime(new Date());
+
+    // 这里的id是为了上传封面所使用的
+    String videoId = videoService.saveVideo(video);
+
+    return SklJSONResult.ok(videoId);
+  }
+
+
+
+  @ApiOperation(value="上传封面", notes="上传封面的接口")
+  @ApiImplicitParams({
+      @ApiImplicitParam(name="userId", value="用户id", required=true,
+          dataType="String", paramType="form"),
+      @ApiImplicitParam(name="videoId", value="视频主键id", required=true,
+          dataType="String", paramType="form")
+  })
+  @PostMapping(value="/uploadCover", headers="content-type=multipart/form-data")
+  public SklJSONResult uploadCover(String userId, String videoId,
+                                     @ApiParam(value="视频封面", required=true)
+                                         MultipartFile file) throws Exception {
+
+    if (StringUtils.isBlank(videoId) || StringUtils.isBlank(userId)) {
+      return SklJSONResult.errorMsg("视频主键id或用户id不能为空...");
+    }
+
+    // 文件保存的命名空间
+//		String fileSpace = "C:/video";
+    // 保存到数据库中的相对路径
+    String uploadPathDB = "/" + userId + "/video";
+
+    FileOutputStream fileOutputStream = null;
+    InputStream inputStream = null;
+    // 文件上传的最终保存路径
+    String finalCoverPath = "";
+    try {
+      if (file != null) {
+
+        String fileName = file.getOriginalFilename();
+        if (StringUtils.isNotBlank(fileName)) {
+
+          finalCoverPath = FILE_SPACE + uploadPathDB + "/" + fileName;
+          // 设置数据库保存的路径
+          uploadPathDB += ("/" + fileName);
+
+          File outFile = new File(finalCoverPath);
+          if (outFile.getParentFile() != null || !outFile.getParentFile().isDirectory()) {
+            // 创建父文件夹
+            outFile.getParentFile().mkdirs();
+          }
+
+          fileOutputStream = new FileOutputStream(outFile);
+          inputStream = file.getInputStream();
+          IOUtils.copy(inputStream, fileOutputStream);
+        }
+
+      } else {
+        return SklJSONResult.errorMsg("上传出错...");
+      }
+    } catch (Exception e) {
+      e.printStackTrace();
+      return SklJSONResult.errorMsg("上传出错...");
+    } finally {
+      if (fileOutputStream != null) {
+        fileOutputStream.flush();
+        fileOutputStream.close();
+      }
+    }
+
+    videoService.updateVideo(videoId, uploadPathDB);
 
     return SklJSONResult.ok();
   }

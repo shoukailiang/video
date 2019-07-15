@@ -65,6 +65,7 @@ public class MergeVideoMp3 {
     for (String c : command) {
       System.out.print(c + " ");
     }
+    System.out.println("");
 
 
     ProcessBuilder builder = new ProcessBuilder(command);
