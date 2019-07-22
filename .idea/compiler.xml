@@ -8,10 +8,10 @@
         <outputRelativeToContentRoot value="true" />
         <module name="videocommon" />
         <module name="videoservice" />
-        <module name="videomapper" />
         <module name="mybatisgeneratorConfig" />
-        <module name="videoapi" />
         <module name="videopojo" />
+        <module name="videoapi" />
+        <module name="videomapper" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

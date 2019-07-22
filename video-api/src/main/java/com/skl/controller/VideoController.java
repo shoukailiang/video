@@ -6,13 +6,16 @@ import com.skl.pojo.Bgm;
 import com.skl.pojo.Videos;
 import com.skl.service.BgmService;
 import com.skl.service.VideoService;
+import com.skl.utils.FetchVideoCover;
 import com.skl.utils.MergeVideoMp3;
+import com.skl.utils.PagedResult;
 import com.skl.utils.SklJSONResult;
 import io.swagger.annotations.*;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
@@ -73,7 +76,7 @@ public class VideoController extends BasicController {
     String coverPathDB = "/" + userId + "/video";
 
 
-    String finalVideoPath="";
+    String finalVideoPath = "";
 
     FileOutputStream fileOutputStream = null;
     InputStream inputStream = null;
@@ -83,9 +86,9 @@ public class VideoController extends BasicController {
         String fileName = file.getOriginalFilename();
 
         // abc.mp4
-        String arrayFilenameItem[] =  fileName.split("\\.");
+        String arrayFilenameItem[] = fileName.split("\\.");
         String fileNamePrefix = "";
-        for (int i = 0 ; i < arrayFilenameItem.length-1 ; i ++) {
+        for (int i = 0; i < arrayFilenameItem.length - 1; i++) {
           fileNamePrefix += arrayFilenameItem[i];
         }
 
@@ -142,11 +145,15 @@ public class VideoController extends BasicController {
     System.out.println("uploadPathDB=" + uploadPathDB);
     System.out.println("finalVideoPath=" + finalVideoPath);
 
+    // 对视频进行截图
+    FetchVideoCover videoInfo = new FetchVideoCover(FFMPEG_EXE);
+    videoInfo.getCover(finalVideoPath, FILE_SPACE + coverPathDB);
+
     // 保存视频信息到数据库
     Videos video = new Videos();
     video.setAudioId(bgmId);
     video.setUserId(userId);
-    video.setVideoSeconds((float)videoSeconds);
+    video.setVideoSeconds((float) videoSeconds);
     video.setVideoHeight(videoHeight);
     video.setVideoWidth(videoWidth);
     video.setVideoDesc(desc);
@@ -162,18 +169,17 @@ public class VideoController extends BasicController {
   }
 
 
-
-  @ApiOperation(value="上传封面", notes="上传封面的接口")
+  @ApiOperation(value = "上传封面", notes = "上传封面的接口")
   @ApiImplicitParams({
-      @ApiImplicitParam(name="userId", value="用户id", required=true,
-          dataType="String", paramType="form"),
-      @ApiImplicitParam(name="videoId", value="视频主键id", required=true,
-          dataType="String", paramType="form")
+      @ApiImplicitParam(name = "userId", value = "用户id", required = true,
+          dataType = "String", paramType = "form"),
+      @ApiImplicitParam(name = "videoId", value = "视频主键id", required = true,
+          dataType = "String", paramType = "form")
   })
-  @PostMapping(value="/uploadCover", headers="content-type=multipart/form-data")
+  @PostMapping(value = "/uploadCover", headers = "content-type=multipart/form-data")
   public SklJSONResult uploadCover(String userId, String videoId,
-                                     @ApiParam(value="视频封面", required=true)
-                                         MultipartFile file) throws Exception {
+                                   @ApiParam(value = "视频封面", required = true)
+                                       MultipartFile file) throws Exception {
 
     if (StringUtils.isBlank(videoId) || StringUtils.isBlank(userId)) {
       return SklJSONResult.errorMsg("视频主键id或用户id不能为空...");
@@ -226,6 +232,33 @@ public class VideoController extends BasicController {
 
     return SklJSONResult.ok();
   }
+  /**
+   * 分页和搜索查询视频列表
+   * @param video
+   * @param isSaveRecord  1 - 需要保存  0 - 不需要保存 ，或者为空的时候
+   * @param page
+   * @param pageSize
+   * @return
+   * @throws Exception
+   */
+  @PostMapping(value = "/showAll")
+  public SklJSONResult showAll(@RequestBody Videos video, Integer isSaveRecord, Integer page, Integer pageSize) throws Exception {
+
+    if (page == null) {
+      page = 1;
+    }
+
+    if (pageSize == null) {
+      pageSize = PAGE_SIZE;
+    }
+
+    PagedResult result = videoService.getAllVideos(video, isSaveRecord, page, pageSize);
+    return SklJSONResult.ok(result);
+  }
 
 
+  @PostMapping(value="/hot")
+  public SklJSONResult hot() throws Exception {
+    return SklJSONResult.ok(videoService.getHotwords());
+  }
 }
