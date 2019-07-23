@@ -261,4 +261,18 @@ public class VideoController extends BasicController {
   public SklJSONResult hot() throws Exception {
     return SklJSONResult.ok(videoService.getHotwords());
   }
+
+
+  @PostMapping(value="/userLike")
+  public SklJSONResult userLike(String userId, String videoId, String videoCreaterId)
+      throws Exception {
+    videoService.userLikeVideo(userId, videoId, videoCreaterId);
+    return SklJSONResult.ok();
+  }
+
+  @PostMapping(value="/userUnLike")
+  public SklJSONResult userUnLike(String userId, String videoId, String videoCreaterId) throws Exception {
+    videoService.userUnLikeVideo(userId, videoId, videoCreaterId);
+    return SklJSONResult.ok();
+  }
 }

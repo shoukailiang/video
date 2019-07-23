@@ -1,6 +1,7 @@
 package com.skl.controller;
 
 import com.skl.pojo.Users;
+import com.skl.pojo.vo.PublisherVideo;
 import com.skl.pojo.vo.UsersVO;
 import com.skl.service.UserService;
 import com.skl.utils.SklJSONResult;
@@ -107,4 +108,28 @@ public class UserController extends BasicController {
     BeanUtils.copyProperties(userInfo,usersVO);
     return SklJSONResult.ok(usersVO);
   }
+
+  @PostMapping("/queryPublisher")
+  public SklJSONResult queryPublisher(String loginUserId, String videoId,
+                                        String publishUserId) throws Exception {
+
+    if (StringUtils.isBlank(publishUserId)) {
+      return SklJSONResult.errorMsg("");
+    }
+
+    // 1. 查询视频发布者的信息
+    Users userInfo = userService.queryUserInfo(publishUserId);
+    UsersVO publisher = new UsersVO();
+    BeanUtils.copyProperties(userInfo, publisher);
+
+    // 2. 查询当前登录者和视频的点赞关系
+    boolean userLikeVideo = userService.isUserLikeVideo(loginUserId, videoId);
+
+    PublisherVideo bean = new PublisherVideo();
+    bean.setPublisher(publisher);
+    bean.setUserLikeVideo(userLikeVideo);
+
+    return SklJSONResult.ok(bean);
+  }
+
 }

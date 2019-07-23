@@ -10,4 +10,10 @@ import java.util.List;
 public interface VideosMapperCustom extends MyMapper<Videos> {
 
   List<VideosVO> queryAllVideos(@Param("videoDesc") String videoDesc);
+
+
+  void addVideoLikeCount(String videoId);
+
+
+  void reduceVideoLikeCount(String videoId);
 }
