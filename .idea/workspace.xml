@@ -3,34 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="39ad6a10-d645-4dbd-be38-59df8bf3bfef" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-api/src/main/java/com/skl/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/video-api/src/main/java/com/skl/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-api/src/main/java/com/skl/controller/VideoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/video-api/src/main/java/com/skl/controller/VideoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-api/src/main/java/com/skl/controller/interceptor/MiniInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/video-api/src/main/java/com/skl/controller/interceptor/MiniInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-api/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/video-api/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-api/src/main/resources/mapper/UsersMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/video-api/src/main/resources/mapper/UsersMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-api/src/main/resources/mapper/VideosMapperCustom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/video-api/src/main/resources/mapper/VideosMapperCustom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-api/target/classes/com/skl/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/video-api/target/classes/com/skl/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-api/target/classes/com/skl/controller/VideoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/video-api/target/classes/com/skl/controller/VideoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-api/target/classes/mapper/UsersMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/video-api/target/classes/mapper/UsersMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-api/target/classes/mapper/VideosMapperCustom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/video-api/target/classes/mapper/VideosMapperCustom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-api/target/video-api-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/video-api/target/video-api-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-mapper/src/main/java/com/skl/mapper/UsersMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/video-mapper/src/main/java/com/skl/mapper/UsersMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-mapper/src/main/java/com/skl/mapper/VideosMapperCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/video-mapper/src/main/java/com/skl/mapper/VideosMapperCustom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-mapper/target/classes/com/skl/mapper/UsersMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/video-mapper/target/classes/com/skl/mapper/UsersMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-mapper/target/classes/com/skl/mapper/VideosMapperCustom.class" beforeDir="false" afterPath="$PROJECT_DIR$/video-mapper/target/classes/com/skl/mapper/VideosMapperCustom.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-mapper/target/video-mapper-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/video-mapper/target/video-mapper-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-pojo/src/main/java/com/skl/pojo/vo/UsersVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/video-pojo/src/main/java/com/skl/pojo/vo/UsersVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-pojo/target/classes/com/skl/pojo/vo/UsersVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/video-pojo/target/classes/com/skl/pojo/vo/UsersVO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-pojo/target/video-pojo-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/video-pojo/target/video-pojo-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-service/src/main/java/com/skl/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/video-service/src/main/java/com/skl/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-service/src/main/java/com/skl/service/VideoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/video-service/src/main/java/com/skl/service/VideoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-service/src/main/java/com/skl/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/video-service/src/main/java/com/skl/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-service/src/main/java/com/skl/service/impl/VideoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/video-service/src/main/java/com/skl/service/impl/VideoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-service/target/classes/com/skl/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/video-service/target/classes/com/skl/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-service/target/classes/com/skl/service/VideoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/video-service/target/classes/com/skl/service/VideoService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-service/target/classes/com/skl/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/video-service/target/classes/com/skl/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-service/target/classes/com/skl/service/impl/VideoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/video-service/target/classes/com/skl/service/impl/VideoServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-service/target/video-service-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/video-service/target/video-service-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/video-common/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -54,110 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/video-api/src/main/java/com/skl/controller/UserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2717">
-              <caret line="161" column="21" selection-start-line="161" selection-start-column="21" selection-end-line="161" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/video-mapper/src/main/java/com/skl/mapper/VideosMapperCustom.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="33" column="2" selection-start-line="33" selection-start-column="2" selection-end-line="33" selection-end-column="2" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/video-api/src/main/resources/mapper/VideosMapperCustom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1216">
-              <caret line="64" selection-start-line="64" selection-end-line="64" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/video-service/src/main/java/com/skl/service/VideoService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="988">
-              <caret line="55" column="17" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/video-service/src/main/java/com/skl/service/UserService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1482">
-              <caret line="79" selection-start-line="79" selection-end-line="79" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/video-service/src/main/java/com/skl/service/impl/UserServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="156" column="17" lean-forward="true" selection-start-line="156" selection-start-column="17" selection-end-line="156" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/video-api/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/video-api/src/main/java/com/skl/controller/interceptor/MiniInterceptor.java">
+        <entry file="file://$PROJECT_DIR$/video-common/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="55" selection-start-line="55" selection-end-line="55" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/video-api/src/main/java/com/skl/controller/RegistLoginController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/video-api/src/main/java/com/skl/controller/BasicController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="445">
+              <caret line="154" column="27" selection-start-line="154" selection-start-column="27" selection-end-line="154" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -194,7 +68,6 @@
         <option value="$PROJECT_DIR$/video-api/src/main/resources/mapper/CommentsMapper.xml" />
         <option value="$PROJECT_DIR$/video-common/src/main/java/com/skl/utils/RedisOperator.java" />
         <option value="$PROJECT_DIR$/video-pojo/src/main/java/com/skl/pojo/vo/UsersVo.java" />
-        <option value="$PROJECT_DIR$/video-common/pom.xml" />
         <option value="$PROJECT_DIR$/video-api/src/main/java/com/skl/controller/RegistLoginController.java" />
         <option value="$PROJECT_DIR$/video-common/src/main/java/com/skl/utils/SklJSONResult.java" />
         <option value="$PROJECT_DIR$/video-pojo/src/main/java/com/skl/pojo/Users.java" />
@@ -242,6 +115,7 @@
         <option value="$PROJECT_DIR$/video-service/src/main/java/com/skl/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/video-api/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/video-api/src/main/java/com/skl/controller/interceptor/MiniInterceptor.java" />
+        <option value="$PROJECT_DIR$/video-common/pom.xml" />
       </list>
     </option>
   </component>
@@ -273,7 +147,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="20" />
     <option name="y" value="20" />
     <option name="width" value="1940" />
@@ -297,58 +171,7 @@
             <path>
               <item name="video" type="b2602c69:ProjectViewProjectNode" />
               <item name="video" type="462c0819:PsiDirectoryNode" />
-              <item name="video-api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="video" type="b2602c69:ProjectViewProjectNode" />
-              <item name="video" type="462c0819:PsiDirectoryNode" />
-              <item name="video-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="video" type="b2602c69:ProjectViewProjectNode" />
-              <item name="video" type="462c0819:PsiDirectoryNode" />
-              <item name="video-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="video" type="b2602c69:ProjectViewProjectNode" />
-              <item name="video" type="462c0819:PsiDirectoryNode" />
-              <item name="video-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="video" type="b2602c69:ProjectViewProjectNode" />
-              <item name="video" type="462c0819:PsiDirectoryNode" />
-              <item name="video-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="skl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="video" type="b2602c69:ProjectViewProjectNode" />
-              <item name="video" type="462c0819:PsiDirectoryNode" />
-              <item name="video-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="skl" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="video" type="b2602c69:ProjectViewProjectNode" />
-              <item name="video" type="462c0819:PsiDirectoryNode" />
-              <item name="video-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="skl" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="interceptor" type="462c0819:PsiDirectoryNode" />
+              <item name="video-common" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -528,12 +351,12 @@
       <workItem from="1563865126407" duration="9007000" />
       <workItem from="1563947550009" duration="1016000" />
       <workItem from="1563948693947" duration="2591000" />
-      <workItem from="1563952319521" duration="1473000" />
+      <workItem from="1563952319521" duration="2102000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117388000" />
+    <option name="totallyTimeSpent" value="118017000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -545,10 +368,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21447721" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21447721" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -567,11 +390,11 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32909605" />
       <window_info anchor="bottom" id="Problems" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.36581922" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.4915254" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Spring" order="13" weight="0.5960452" />
       <window_info anchor="bottom" id="Messages" order="14" />
-      <window_info active="true" anchor="bottom" id="Run Dashboard" order="15" visible="true" weight="0.37853107" />
+      <window_info anchor="bottom" id="Run Dashboard" order="15" weight="0.37853107" />
       <window_info anchor="bottom" id="Java Enterprise" order="16" weight="0.32909605" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -738,13 +561,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/video-common/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="147" column="49" selection-start-line="147" selection-start-column="49" selection-end-line="147" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/video-mapper/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
@@ -898,33 +714,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/video-service/src/main/java/com/skl/service/VideoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="988">
-          <caret line="55" column="17" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video-service/src/main/java/com/skl/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1482">
-          <caret line="79" selection-start-line="79" selection-end-line="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video-service/src/main/java/com/skl/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="156" column="17" lean-forward="true" selection-start-line="156" selection-start-column="17" selection-end-line="156" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/video-api/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -970,6 +759,40 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/video-service/src/main/java/com/skl/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="162" column="34" lean-forward="true" selection-start-line="162" selection-start-column="34" selection-end-line="162" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/video-service/src/main/java/com/skl/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="13" column="12" lean-forward="true" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/video-service/src/main/java/com/skl/service/VideoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="52" column="31" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/video-common/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="154" column="27" selection-start-line="154" selection-start-column="27" selection-end-line="154" selection-end-column="27" />
         </state>
       </provider>
     </entry>
