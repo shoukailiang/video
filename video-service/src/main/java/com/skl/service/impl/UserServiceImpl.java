@@ -1,9 +1,13 @@
 package com.skl.service.impl;
 
+import com.skl.mapper.UsersFansMapper;
 import com.skl.mapper.UsersLikeVideosMapper;
 import com.skl.mapper.UsersMapper;
+import com.skl.mapper.UsersReportMapper;
 import com.skl.pojo.Users;
+import com.skl.pojo.UsersFans;
 import com.skl.pojo.UsersLikeVideos;
+import com.skl.pojo.UsersReport;
 import com.skl.service.UserService;
 import org.apache.commons.lang3.StringUtils;
 import org.n3r.idworker.Sid;
@@ -13,6 +17,7 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
 
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -22,7 +27,14 @@ public class UserServiceImpl implements UserService {
   private UsersMapper usersMapper;
 
   @Autowired
+  private UsersReportMapper usersReportMapper;
+
+  @Autowired
   private UsersLikeVideosMapper usersLikeVideosMapper;
+
+  @Autowired
+  private UsersFansMapper usersFansMapper;
+
   @Autowired
   private Sid sid;
 
@@ -95,5 +107,63 @@ public class UserServiceImpl implements UserService {
     }
 
     return false;
+  }
+
+  @Transactional(propagation = Propagation.REQUIRED)
+  @Override
+  public void saveUserFanRelation(String userId, String fanId) {
+    String relId = sid.nextShort();
+
+    UsersFans userFan = new UsersFans();
+    userFan.setId(relId);
+    userFan.setUserId(userId);
+    userFan.setFanId(fanId);
+
+    usersFansMapper.insert(userFan);
+
+
+    usersMapper.addFansCount(userId);
+    usersMapper.addFollersCount(fanId);
+  }
+
+  @Transactional(propagation = Propagation.REQUIRED)
+  @Override
+  public void deleteUserFanRelation(String userId, String fanId) {
+    Example example = new Example(UsersFans.class);
+    Example.Criteria criteria = example.createCriteria();
+
+    criteria.andEqualTo("userId", userId);
+    criteria.andEqualTo("fanId", fanId);
+
+    usersFansMapper.deleteByExample(example);
+
+    usersMapper.reduceFansCount(userId);
+    usersMapper.reduceFollersCount(fanId);
+  }
+
+  @Override
+  public boolean queryIfFollow(String userId, String fanId) {
+    Example example = new Example(UsersFans.class);
+    Example.Criteria criteria = example.createCriteria();
+
+    criteria.andEqualTo("userId", userId);
+    criteria.andEqualTo("fanId", fanId);
+
+    List<UsersFans> list = usersFansMapper.selectByExample(example);
+
+    if (list != null && !list.isEmpty() && list.size() > 0) {
+      return true;
+    }
+    return false;
+  }
+
+  @Transactional(propagation = Propagation.REQUIRED)
+  @Override
+  public void reportUser(UsersReport usersReport) {
+    String urId = sid.nextShort();
+    usersReport.setId(urId);
+    usersReport.setCreateDate(new Date());
+
+    usersReportMapper.insert(usersReport);
   }
 }

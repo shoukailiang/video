@@ -11,6 +11,7 @@ public class UsersVO {
 
   private String userToken;
 
+  private boolean isFollow;
 
   private String username;
 

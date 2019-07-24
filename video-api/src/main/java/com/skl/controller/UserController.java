@@ -1,6 +1,7 @@
 package com.skl.controller;
 
 import com.skl.pojo.Users;
+import com.skl.pojo.UsersReport;
 import com.skl.pojo.vo.PublisherVideo;
 import com.skl.pojo.vo.UsersVO;
 import com.skl.service.UserService;
@@ -12,10 +13,7 @@ import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
@@ -94,24 +92,25 @@ public class UserController extends BasicController {
     return SklJSONResult.ok(uploadPathDB);
   }
 
-  @ApiOperation(value="查询用户信息", notes="查询用户信息的接口")
-  @ApiImplicitParam(name="userId", value="用户id", required=true,
-      dataType="String", paramType="query")
+  @ApiOperation(value = "查询用户信息", notes = "查询用户信息的接口")
+  @ApiImplicitParam(name = "userId", value = "用户id", required = true,
+      dataType = "String", paramType = "query")
   @PostMapping("/query")
-  public SklJSONResult query(String userId) throws Exception {
-    if(StringUtils.isBlank(userId)){
+  public SklJSONResult query(String userId, String fanId) throws Exception {
+    if (StringUtils.isBlank(userId)) {
       return SklJSONResult.errorMsg("用户id不能为空...");
     }
     Users userInfo = userService.queryUserInfo(userId);
 
     UsersVO usersVO = new UsersVO();
-    BeanUtils.copyProperties(userInfo,usersVO);
+    BeanUtils.copyProperties(userInfo, usersVO);
+    usersVO.setFollow(userService.queryIfFollow(userId, fanId));
     return SklJSONResult.ok(usersVO);
   }
 
   @PostMapping("/queryPublisher")
   public SklJSONResult queryPublisher(String loginUserId, String videoId,
-                                        String publishUserId) throws Exception {
+                                      String publishUserId) throws Exception {
 
     if (StringUtils.isBlank(publishUserId)) {
       return SklJSONResult.errorMsg("");
@@ -130,6 +129,39 @@ public class UserController extends BasicController {
     bean.setUserLikeVideo(userLikeVideo);
 
     return SklJSONResult.ok(bean);
+  }
+
+  @PostMapping("/beyourfans")
+  public SklJSONResult beyourfans(String userId, String fanId) throws Exception {
+
+    if (StringUtils.isBlank(userId) || StringUtils.isBlank(fanId)) {
+      return SklJSONResult.errorMsg("");
+    }
+
+    userService.saveUserFanRelation(userId, fanId);
+
+    return SklJSONResult.ok("关注成功...");
+  }
+
+  @PostMapping("/dontbeyourfans")
+  public SklJSONResult dontbeyourfans(String userId, String fanId) throws Exception {
+
+    if (StringUtils.isBlank(userId) || StringUtils.isBlank(fanId)) {
+      return SklJSONResult.errorMsg("");
+    }
+
+    userService.deleteUserFanRelation(userId, fanId);
+
+    return SklJSONResult.ok("取消关注成功...");
+  }
+
+  @PostMapping("/reportUser")
+  public SklJSONResult reportUser(@RequestBody UsersReport usersReport) throws Exception {
+
+    // 保存举报信息
+    userService.reportUser(usersReport);
+
+    return SklJSONResult.errorMsg("举报成功...有你平台变得更美好...");
   }
 
 }

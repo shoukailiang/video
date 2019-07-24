@@ -275,4 +275,58 @@ public class VideoController extends BasicController {
     videoService.userUnLikeVideo(userId, videoId, videoCreaterId);
     return SklJSONResult.ok();
   }
+
+
+  /**
+   * 我关注的人发的视频
+   * @param userId
+   * @param page
+   * @return
+   * @throws Exception
+   */
+  @PostMapping("/showMyFollow")
+  public SklJSONResult showMyFollow(String userId, Integer page) throws Exception {
+
+    if (StringUtils.isBlank(userId)) {
+      return SklJSONResult.ok();
+    }
+
+    if (page == null) {
+      page = 1;
+    }
+
+    int pageSize = 6;
+
+    PagedResult videosList = videoService.queryMyFollowVideos(userId, page, pageSize);
+
+    return SklJSONResult.ok(videosList);
+  }
+
+  /**
+   * 我收藏(点赞)过的视频列表
+   * @param userId
+   * @param page
+   * @param pageSize
+   * @return
+   * @throws Exception
+   */
+  @PostMapping("/showMyLike")
+  public SklJSONResult showMyLike(String userId, Integer page, Integer pageSize) throws Exception {
+
+    if (StringUtils.isBlank(userId)) {
+      return SklJSONResult.ok();
+    }
+
+    if (page == null) {
+      page = 1;
+    }
+
+    if (pageSize == null) {
+      pageSize = 6;
+    }
+
+    PagedResult videosList = videoService.queryMyLikeVideos(userId, page, pageSize);
+
+    return SklJSONResult.ok(videosList);
+  }
 }

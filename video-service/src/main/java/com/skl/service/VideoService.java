@@ -33,7 +33,7 @@ public interface VideoService {
    * @param videoId
    * @param videoCreaterId  视频创建者的id
    */
-  public void userLikeVideo(String userId, String videoId, String videoCreaterId);
+  void userLikeVideo(String userId, String videoId, String videoCreaterId);
 
   /**
    * 用户不喜欢/取消点赞视频
@@ -41,5 +41,23 @@ public interface VideoService {
    * @param videoId
    * @param videoCreaterId
    */
-  public void userUnLikeVideo(String userId, String videoId, String videoCreaterId);
+  void userUnLikeVideo(String userId, String videoId, String videoCreaterId);
+
+  /**
+   * 查询我喜欢的视频列表
+   * @param userId
+   * @param page
+   * @param pageSize
+   * @return
+   */
+  PagedResult queryMyLikeVideos(String userId, Integer page, Integer pageSize);
+
+  /**
+   * 查询我关注的人的视频列表
+   * @param userId
+   * @param page
+   * @param pageSize
+   * @return
+   */
+  public PagedResult queryMyFollowVideos(String userId, Integer page, Integer pageSize);
 }

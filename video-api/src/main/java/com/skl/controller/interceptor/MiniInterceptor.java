@@ -19,7 +19,7 @@ public class MiniInterceptor implements HandlerInterceptor {
   @Autowired
   private RedisOperator redis;
 
-  public static final String USER_REDIS_SESSION = "user-redis-session";
+  public static final String USER_REDIS_SESSION = "USER-REDIS-SESSION";
 
   /**
    * 拦截请求，在controller调用之前
@@ -37,9 +37,10 @@ public class MiniInterceptor implements HandlerInterceptor {
 
     if (StringUtils.isNotBlank(userId) && StringUtils.isNotBlank(userToken)) {
       String uniqueToken = redis.get(USER_REDIS_SESSION + ":" + userId);
+      System.out.println(userId);
       // 有可能已经过期了
       if (StringUtils.isEmpty(uniqueToken) && StringUtils.isBlank(uniqueToken)) {
-        System.out.println("请登录...");
+        System.out.println("请登录1...");
         returnErrorResponse(httpServletResponse, new SklJSONResult().errorTokenMsg("请登录..."));
         return false;
       } else {
@@ -51,7 +52,7 @@ public class MiniInterceptor implements HandlerInterceptor {
         }
       }
     } else {
-      System.out.println("请登录...");
+      System.out.println("请登录2...");
       returnErrorResponse(httpServletResponse, new SklJSONResult().errorTokenMsg("请登录..."));
       return false;
     }
