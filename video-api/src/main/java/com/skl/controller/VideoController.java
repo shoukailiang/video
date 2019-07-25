@@ -3,6 +3,7 @@ package com.skl.controller;
 
 import com.skl.emums.VideoStatusEnum;
 import com.skl.pojo.Bgm;
+import com.skl.pojo.Comments;
 import com.skl.pojo.Videos;
 import com.skl.service.BgmService;
 import com.skl.service.VideoService;
@@ -328,5 +329,38 @@ public class VideoController extends BasicController {
     PagedResult videosList = videoService.queryMyLikeVideos(userId, page, pageSize);
 
     return SklJSONResult.ok(videosList);
+  }
+
+
+  @PostMapping("/saveComment")
+  public SklJSONResult saveComment(@RequestBody Comments comment,
+                                     String fatherCommentId, String toUserId) throws Exception {
+
+    comment.setFatherCommentId(fatherCommentId);
+    comment.setToUserId(toUserId);
+
+    videoService.saveComment(comment);
+    return SklJSONResult.ok();
+  }
+
+  @PostMapping("/getVideoComments")
+  public SklJSONResult getVideoComments(String videoId, Integer page, Integer pageSize) throws Exception {
+
+    if (StringUtils.isBlank(videoId)) {
+      return SklJSONResult.ok();
+    }
+
+    // 分页查询视频列表，时间顺序倒序排序
+    if (page == null) {
+      page = 1;
+    }
+
+    if (pageSize == null) {
+      pageSize = 10;
+    }
+
+    PagedResult list = videoService.getAllComments(videoId, page, pageSize);
+
+    return SklJSONResult.ok(list);
   }
 }

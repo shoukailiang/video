@@ -7,10 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="videocommon" />
-        <module name="videoapi" />
-        <module name="videomapper" />
-        <module name="mybatisgeneratorConfig" />
         <module name="videoservice" />
+        <module name="mybatisgeneratorConfig" />
+        <module name="videomapper" />
+        <module name="videoapi" />
         <module name="videopojo" />
       </profile>
     </annotationProcessing>
