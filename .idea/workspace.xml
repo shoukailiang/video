@@ -2,47 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="39ad6a10-d645-4dbd-be38-59df8bf3bfef" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisgeneratorConfig/src/main/java/com/skl/mapper/BgmMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisgeneratorConfig/src/main/java/com/skl/mapper/CommentsMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisgeneratorConfig/src/main/java/com/skl/mapper/SearchRecordsMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisgeneratorConfig/src/main/java/com/skl/mapper/UsersFansMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisgeneratorConfig/src/main/java/com/skl/mapper/UsersLikeVideosMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisgeneratorConfig/src/main/java/com/skl/mapper/UsersMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisgeneratorConfig/src/main/java/com/skl/mapper/UsersReportMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisgeneratorConfig/src/main/java/com/skl/mapper/VideosMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisgeneratorConfig/src/main/java/com/skl/pojo/Bgm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisgeneratorConfig/src/main/java/com/skl/pojo/Comments.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisgeneratorConfig/src/main/java/com/skl/pojo/SearchRecords.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisgeneratorConfig/src/main/java/com/skl/pojo/Users.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisgeneratorConfig/src/main/java/com/skl/pojo/UsersFans.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisgeneratorConfig/src/main/java/com/skl/pojo/UsersLikeVideos.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisgeneratorConfig/src/main/java/com/skl/pojo/UsersReport.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisgeneratorConfig/src/main/java/com/skl/pojo/Videos.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisgeneratorConfig/src/main/resources/mapper/BgmMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisgeneratorConfig/src/main/resources/mapper/CommentsMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisgeneratorConfig/src/main/resources/mapper/SearchRecordsMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisgeneratorConfig/src/main/resources/mapper/UsersFansMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisgeneratorConfig/src/main/resources/mapper/UsersLikeVideosMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisgeneratorConfig/src/main/resources/mapper/UsersMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisgeneratorConfig/src/main/resources/mapper/UsersReportMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisgeneratorConfig/src/main/resources/mapper/VideosMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-api/src/main/java/com/skl/controller/VideoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/video-api/src/main/java/com/skl/controller/VideoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-api/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/video-api/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-api/target/classes/com/skl/controller/VideoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/video-api/target/classes/com/skl/controller/VideoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-api/target/video-api-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/video-api/target/video-api-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/video-common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-common/target/video-common-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/video-common/target/video-common-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-mapper/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/video-mapper/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-mapper/target/video-mapper-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/video-mapper/target/video-mapper-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-pojo/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/video-pojo/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-pojo/target/video-pojo-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/video-pojo/target/video-pojo-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-service/src/main/java/com/skl/service/VideoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/video-service/src/main/java/com/skl/service/VideoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-service/src/main/java/com/skl/service/impl/VideoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/video-service/src/main/java/com/skl/service/impl/VideoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-service/target/classes/com/skl/service/VideoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/video-service/target/classes/com/skl/service/VideoService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-service/target/classes/com/skl/service/impl/VideoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/video-service/target/classes/com/skl/service/impl/VideoServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video-service/target/video-service-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/video-service/target/video-service-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -177,7 +137,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-43" />
     <option name="y" value="17" />
     <option name="width" value="1938" />
@@ -420,12 +380,12 @@
       <workItem from="1563947550009" duration="1016000" />
       <workItem from="1563948693947" duration="2591000" />
       <workItem from="1563952319521" duration="2288000" />
-      <workItem from="1563975111949" duration="4193000" />
+      <workItem from="1563975111949" duration="5727000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122396000" />
+    <option name="totallyTimeSpent" value="123930000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -437,9 +397,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21715818" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21715818" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -458,11 +418,11 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32909605" />
       <window_info anchor="bottom" id="Problems" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.4915254" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.4915254" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Spring" order="13" weight="0.5960452" />
       <window_info anchor="bottom" id="Messages" order="14" />
-      <window_info anchor="bottom" id="Run Dashboard" order="15" visible="true" weight="0.37853107" />
+      <window_info anchor="bottom" id="Run Dashboard" order="15" weight="0.37853107" />
       <window_info anchor="bottom" id="Java Enterprise" order="16" weight="0.32909605" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
